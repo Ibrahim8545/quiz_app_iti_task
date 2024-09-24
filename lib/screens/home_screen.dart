@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                   name: 'Please Enter Your Name',
                   headerText: 'Welcome',
                   controller: nameController,
-                  text: 'Welome',
+                  text: 'Submit',
                   showTextField: true,
                   onTap: () {
                     Navigator.push(

@@ -17,6 +17,16 @@ Quiz createQuiz() {
         answers: ['Facebook', 'Google', 'Microsoft', 'Apple'],
         correctAnswerIndex: 1,
       ),
+      QuestionModel(
+        questionText: 'What is the name of the language used to build Flutter apps?',
+        answers: ['Dart', 'Kotlin', 'Java', 'Swift'],
+        correctAnswerIndex:0,
+      ),
+      QuestionModel(
+        questionText: ' The World Largest desert is ? ',
+         answers: [' Thar',' Sahara', ' Sonoran', ' Kalahari'],
+          correctAnswerIndex: 1) 
+
     ],
   );
 }

@@ -37,26 +37,26 @@ final TextEditingController nameController = TextEditingController();
                 controller:nameController ,
                 onTap: () {
                   Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => QuizScreen(
-              
-                quiz: Quiz(
-                  title: 'Sample Quiz',
-                  questions: [
-                    QuestionModel(
-                      questionText: 'What is Flutter?',
-                      answers: ['Framework', 'Library', 'Language', 'Tool'],
-                      correctAnswerIndex: 0,
-                    ),
-                    QuestionModel(
-                      questionText: 'Who developed Flutter?',
-                      answers: ['Facebook', 'Google', 'Microsoft', 'Apple'],
-                      correctAnswerIndex: 1,
-                    ),
-                  ],
-                )
-              )),
-            );
+    context,
+    MaterialPageRoute(builder: (context) => QuizScreen(
+      quiz: Quiz(
+        title: 'Sample Quiz',
+        questions: [
+          QuestionModel(
+            questionText: 'What is Flutter?',
+            answers: ['Framework', 'Library', 'Language', 'Tool'],
+            correctAnswerIndex: 0,
+          ),
+          QuestionModel(
+            questionText: 'Who developed Flutter?',
+            answers: ['Facebook', 'Google', 'Microsoft', 'Apple'],
+            correctAnswerIndex: 1,
+          ),
+        ],
+      ),
+      name: nameController.text, // Pass the name here
+    )),
+  );
                   
                 },
 

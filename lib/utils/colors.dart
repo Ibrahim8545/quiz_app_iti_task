@@ -6,4 +6,7 @@ class AppColor
 
   static const Color gray = Color(0xffABBFB8) ;
 
+  static const Color secondaryColor = Color(0xff86948F);
+
+
 }

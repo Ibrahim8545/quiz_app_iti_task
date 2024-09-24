@@ -12,8 +12,11 @@ VoidCallback  onTap;
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.all(15),
+       
+        padding: const EdgeInsets.symmetric(
+          vertical: 12,
+          horizontal: 30
+        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: color,

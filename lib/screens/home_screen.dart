@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:quizapp/models/question_model.dart';
 import 'package:quizapp/models/quiz_model.dart';
 import 'package:quizapp/screens/quiz_screen.dart';
+import 'package:quizapp/widget/create_quiz.dart';
 import 'package:quizapp/widget/home_sumit_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home_screen';
-   HomeScreen({super.key});
-final TextEditingController nameController = TextEditingController();
+  HomeScreen({super.key});
+  final TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,38 +31,24 @@ final TextEditingController nameController = TextEditingController();
             Image.asset('assets/images/Ellipse 1.png'),
             const SizedBox(height: 20),
             Padding(
-              padding:const  EdgeInsets.only(right: 27),
-              child: TakeName(
-                name: 'Please Enter Your Name',
-                headerText: 'Welcome',
-                controller:nameController ,
-                onTap: () {
-                  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => QuizScreen(
-      quiz: Quiz(
-        title: 'Sample Quiz',
-        questions: [
-          QuestionModel(
-            questionText: 'What is Flutter?',
-            answers: ['Framework', 'Library', 'Language', 'Tool'],
-            correctAnswerIndex: 0,
-          ),
-          QuestionModel(
-            questionText: 'Who developed Flutter?',
-            answers: ['Facebook', 'Google', 'Microsoft', 'Apple'],
-            correctAnswerIndex: 1,
-          ),
-        ],
-      ),
-      name: nameController.text, // Pass the name here
-    )),
-  );
-                  
-                },
-
-                )
-                ),
+                padding: const EdgeInsets.only(right: 27),
+                child: TakeName(
+                  name: 'Please Enter Your Name',
+                  headerText: 'Welcome',
+                  controller: nameController,
+                  text: 'Welome',
+                  showTextField: true,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => QuizScreen(
+                                quiz: createQuiz(),
+                                name: nameController.text, 
+                              )),
+                    );
+                  },
+                )),
           ],
         ),
       ),

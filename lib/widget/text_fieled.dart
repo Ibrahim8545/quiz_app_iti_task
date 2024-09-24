@@ -8,24 +8,25 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-      ),
+      width: double.infinity,
+      height: 35,
+      padding: const EdgeInsets.symmetric(horizontal: 0,),
+      
       child: TextFormField(
         controller: controller, // Attach the controller here
         decoration: InputDecoration(
           filled: true,
-          fillColor: const Color(0xffABBFB8),
+          fillColor:  Colors.white,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Colors.white),
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Colors.white),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Colors.white),
           ),
         ),

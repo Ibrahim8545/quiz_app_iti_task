@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/screens/home_screen.dart';
+import 'package:quizapp/utils/colors.dart';
+import 'package:quizapp/widget/home_sumit_screen.dart';
 
 class ScoreScreen extends StatelessWidget {
   final int score;
@@ -10,21 +13,29 @@ class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Your Score")),
+      backgroundColor: AppColor.secondaryColor,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Congratulations, $name!",
-              style: TextStyle(fontSize: 24),
-            ),
-            SizedBox(height: 20),
-            Text(
-              "You scored $score out of $total!",
-              style: TextStyle(fontSize: 24),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TakeName(
+                controller: TextEditingController(text: name),
+                headerText: 'Congratulations!!!!!',
+                text:'Finish',
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(context, HomeScreen.routeName, (route) => false,);
+                },
+                name:  '''hello $name YOUR SCORE IS
+                 $score / $total''',
+                showTextField: false,
+                
+                
+              )
+            
+            ],
+          ),
         ),
       ),
     );

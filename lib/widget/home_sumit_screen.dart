@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/models/quiz_model.dart';
+import 'package:quizapp/screens/home_screen.dart';
+import 'package:quizapp/screens/quiz_screen.dart';
 import 'package:quizapp/utils/colors.dart';
 import 'package:quizapp/widget/custom_button.dart';
 import 'package:quizapp/widget/text_fieled.dart';
 
 class TakeName extends StatelessWidget {
-  TakeName({required this.name,required this.headerText ,super.key});
+  TakeName({required this.name,required this.headerText ,required this.controller,required this.onTap,super.key});
   String name;
   String headerText;
+    final VoidCallback onTap;
+ TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -31,10 +36,14 @@ class TakeName extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const CustomTextField(),
+           CustomTextField(
+            controller: controller,
+
+          ),
  const   SizedBox(height: 20,),
           CustomButttom(
-            onTap: () {}, text:'sumbit',
+            onTap: onTap,
+             text:'sumbit',
             color: AppColor.primaryColor,
             )
         ]),

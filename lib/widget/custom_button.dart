@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/utils/colors.dart';
 
 class CustomButttom extends StatelessWidget {
   CustomButttom({required this.onTap,this.textStyle, this .color,required this.text, super.key});
@@ -16,7 +17,8 @@ VoidCallback  onTap;
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: color,
-          border: Border.all(color: Colors.amber)
+          border: Border.all(color: AppColor.primaryColor
+          )
           
           
         ),

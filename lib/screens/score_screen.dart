@@ -6,9 +6,9 @@ import 'package:quizapp/widget/home_sumit_screen.dart';
 class ScoreScreen extends StatelessWidget {
   final int score;
   final int total;
-  final String name; // New parameter
+  final String name; 
 
-  ScoreScreen({required this.score, required this.total, required this.name}); // Update constructor
+  ScoreScreen({required this.score, required this.total, required this.name}); 
 
   @override
   Widget build(BuildContext context) {

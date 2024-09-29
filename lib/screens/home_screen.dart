@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/models/question_model.dart';
-import 'package:quizapp/models/quiz_model.dart';
+
 import 'package:quizapp/screens/quiz_screen.dart';
 import 'package:quizapp/widget/create_quiz.dart';
 import 'package:quizapp/widget/home_sumit_screen.dart';
@@ -12,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff86948F),
+      backgroundColor:const  Color(0xff86948F),
       body: Padding(
         padding: const EdgeInsets.only(top: 65, left: 27),
         child: Column(

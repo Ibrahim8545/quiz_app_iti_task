@@ -11,11 +11,11 @@ class CustomTextField extends StatelessWidget {
       
       height: 40, 
       child: TextFormField(
-        controller: controller, // Attach the controller here
+        controller: controller, 
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
-          contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15), // Adjust padding
+          contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: Colors.white),

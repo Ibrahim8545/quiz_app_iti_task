@@ -8,7 +8,7 @@ class QuizScreen extends StatelessWidget {
   final Quiz quiz;
   final String name; // New parameter
 
-  QuizScreen({required this.quiz, required this.name}); // Update constructor
+  QuizScreen({required this.quiz, required this.name}); 
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,9 @@ class QuizScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               width: double.infinity,
-              padding: EdgeInsets.all(20),
-              // Add padding for better spacing
-              child: SingleChildScrollView( // Add scrolling capability if needed
+              padding:const  EdgeInsets.all(20),
+             
+              child: SingleChildScrollView( 
                 child: QuestionScreen(questions: quiz.questions, name: name),
               ),
             ),

@@ -5,7 +5,7 @@ import 'package:quizapp/screens/quiz_screen.dart';
 import 'package:quizapp/utils/colors.dart';
 import 'package:quizapp/widget/custom_button.dart';
 
-import 'package:quizapp/widget/text_fieled.dart'; // Ensure this matches your custom text field file
+import 'package:quizapp/widget/text_fieled.dart'; 
 
 class TakeName extends StatelessWidget {
   const TakeName({
@@ -14,7 +14,7 @@ class TakeName extends StatelessWidget {
     required this.text,
     required this.controller,
     required this.onTap,
-    this.showTextField = true, // Default to true
+    this.showTextField = true, 
     Key? key,
   }) : super(key: key);
 
@@ -46,7 +46,7 @@ class TakeName extends StatelessWidget {
                 style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 10),
-              if (showTextField) // Show the text field based on the flag
+              if (showTextField) 
                 CustomTextField(
                   controller: controller,
                 ),
